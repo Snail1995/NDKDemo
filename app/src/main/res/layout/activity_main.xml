@@ -6,9 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context="mobi.xiaohong.hellondk.MainActivity">
 
     <TextView
+        android:textSize="30dp"
+        android:textColor="#f00"
         android:id="@+id/sample_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +27,6 @@
         android:id="@+id/main_iamge"
         android:src="@mipmap/ic_launcher"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

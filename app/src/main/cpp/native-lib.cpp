@@ -6,7 +6,7 @@ jstring
 Java_mobi_xiaohong_hellondk_MainActivity_stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
-    std::string hello = "Hello from 冯红静";
+    std::string hello = "Hello from JNI";
     return env->NewStringUTF(hello.c_str());
 }
 

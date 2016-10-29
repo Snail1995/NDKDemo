@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         mImage = (ImageView) findViewById(R.id.main_iamge);
         tv.setText(stringFromJNI());
 
+        // 讲一个图片进行变色
         Bitmap bitmap =
                 BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
 
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "appkey: " + appkey
                 + "  appsecret: " + secret, Toast.LENGTH_SHORT).show();
 
-        NativeHelper.sayHello("冯红静");
+        //  调用Android 的代码, 显示Android 的日志
+        NativeHelper.sayHello("JNI");
     }
 }

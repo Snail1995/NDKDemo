@@ -40,17 +40,20 @@ Java_mobi_xiaohong_hellondk_NativeHelper_add(
 
 JNIEXPORT jint JNICALL
         Java_mobi_xiaohong_hellondk_NativeHelper_sayHello(
-        JNIEnv * env, jclass type, jstring name){
+        JNIEnv * env, jclass type, jstring str){
     // TODO: 调用Android 的代码, 显示Android 的日志
     // 代码需要调用系统日志库, 这个已经在 CMakeLists.txt, 添加了, 因此可以直接调用
+    const char *TAG = "NativeHelper";
 
-    const  char* TAG = "NativeHelper";
-//    jstring  --> const char *
-    jboolean b = JNI_TRUE;
-    const char* text = (*env)->GetStringUTFChars(*env, name, &b);
+    // TODO: 看看错不错   jstring ->  char *
+    jboolean b = JNI_FALSE;
+    const char *text = (*env)->GetStringUTFChars(env, str, &b);
+
+    // 打印日志，直接显示字符串
     __android_log_write(ANDROID_LOG_DEBUG, TAG, text);
+
     // 销毁临时生成的字符串
-    (*env)->ReleaseStringChars(env, name, text);
+    (*env)->ReleaseStringUTFChars(env, str, text);
 }
 
 JNIEXPORT jintArray JNICALL

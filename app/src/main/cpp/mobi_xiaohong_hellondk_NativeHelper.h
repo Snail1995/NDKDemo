@@ -37,4 +37,7 @@ JNIEXPORT jintArray JNICALL
 Java_mobi_xiaohong_hellondk_NativeHelper_convertBitmap(
         JNIEnv *env, jclass type, jintArray colors_,
         jint w, jint h);
+
+
+
 #endif //HELLONDK_MOBI_XIAOHONG_HELLONDK_NATIVEHELPER_H

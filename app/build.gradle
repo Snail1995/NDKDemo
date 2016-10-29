@@ -10,6 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // 用于CMake 编译类库的参数
         externalNativeBuild {
             cmake {
                 cppFlags ""
